@@ -28,6 +28,10 @@ impl Account {
     pub fn debit(&mut self, amount: f64) {
         self.transactions
             .push(Transaction::new(String::from("debit"), amount));
+        self.transactions
+            .push(Transaction::new(String::from("debit"), amount));
+        self.transactions
+            .push(Transaction::new(String::from("debit"), amount));
     }
 
     pub fn get_balance(&self) -> f64 {

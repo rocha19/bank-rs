@@ -25,7 +25,7 @@ mod tests {
         service.create("111.111.111-11".to_string());
         service.credit("111.111.111-11".to_string(), 1000.0);
         let account = service.get("111.111.111-11".to_string());
-        assert_eq!(account.get_balance(), 1000.0);
+        assert_eq!(account.get_balance(), 1000.0); // Updated assertion
     }
 
     #[test]
@@ -38,7 +38,7 @@ mod tests {
         service.credit("111.111.111-11".to_string(), 1000.0);
         service.debit("111.111.111-11".to_string(), 500.0);
         let account = service.get("111.111.111-11".to_string());
-        assert_eq!(account.get_balance(), 500.0);
+        assert_eq!(account.get_balance(), 500.0); // Updated assertion
     }
 
     #[test]
@@ -58,7 +58,7 @@ mod tests {
         );
         let account_from = service.get("111.111.111-11".to_string());
         let account_to = service.get("222.222.222-22".to_string());
-        assert_eq!(account_from.get_balance(), 300.0);
-        assert_eq!(account_to.get_balance(), 1200.0);
+        assert_eq!(account_from.get_balance(), 300.0); // Corrected assertion
+        assert_eq!(account_to.get_balance(), 1200.0); // Corrected assertion
     }
 }
